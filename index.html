@@ -1,0 +1,1235 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TECEZE — Technology Solutions for a Smarter Tomorrow</title>
+  <meta name="description" content="TECEZE helps organizations build secure, scalable and future-ready technology foundations to drive real business impact." />
+  <meta name="theme-color" content="#f4f8fe" />
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500..800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css?v=1792040947" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- SVG sprite: logo + icons, referenced with <use href="#id"> -->
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="wordmark" viewBox="0 0 610 100">
+      <g fill="currentColor">
+        <!-- T -->
+        <path d="M3 0H93a3 3 0 0 1 3 3V17a3 3 0 0 1-3 3H59V97a3 3 0 0 1-3 3H40a3 3 0 0 1-3-3V20H3a3 3 0 0 1-3-3V3a3 3 0 0 1 3-3Z" />
+        <!-- E -->
+        <path transform="translate(108 0)" d="M18 0H87a3 3 0 0 1 3 3V17a3 3 0 0 1-3 3H22V40H74a3 3 0 0 1 3 3V57a3 3 0 0 1-3 3H22V80H87a3 3 0 0 1 3 3V97a3 3 0 0 1-3 3H18A18 18 0 0 1 0 82V18A18 18 0 0 1 18 0Z" />
+        <!-- C -->
+        <path transform="translate(210 0)" d="M92 36H70V20H26a4 4 0 0 0-4 4V76a4 4 0 0 0 4 4H70V64H92V76a24 24 0 0 1-24 24H24A24 24 0 0 1 0 76V24A24 24 0 0 1 24 0H68a24 24 0 0 1 24 24Z" />
+        <!-- E (with accent) -->
+        <path transform="translate(314 0)" d="M18 0H87a3 3 0 0 1 3 3V17a3 3 0 0 1-3 3H22V40H74a3 3 0 0 1 3 3V57a3 3 0 0 1-3 3H22V80H87a3 3 0 0 1 3 3V97a3 3 0 0 1-3 3H18A18 18 0 0 1 0 82V18A18 18 0 0 1 18 0Z" />
+        <!-- Z -->
+        <path transform="translate(416 0)" d="M3 0H89a3 3 0 0 1 3 3V20L32 80H89a3 3 0 0 1 3 3V97a3 3 0 0 1-3 3H3a3 3 0 0 1-3-3V80L60 20H3a3 3 0 0 1-3-3V3a3 3 0 0 1 3-3Z" />
+        <!-- E -->
+        <path transform="translate(520 0)" d="M18 0H87a3 3 0 0 1 3 3V17a3 3 0 0 1-3 3H22V40H74a3 3 0 0 1 3 3V57a3 3 0 0 1-3 3H22V80H87a3 3 0 0 1 3 3V97a3 3 0 0 1-3 3H18A18 18 0 0 1 0 82V18A18 18 0 0 1 18 0Z" />
+      </g>
+      <rect x="314" y="40" width="22" height="20" style="fill: var(--logo-accent, #0a76fc)" />
+    </symbol>
+
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" /></symbol>
+    <symbol id="i-chevron-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6" /></symbol>
+    <symbol id="i-chevron-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6" /></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="10" />
+      <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+      <path d="M2 12h20M3.1 7.5h17.8M3.1 16.5h17.8" />
+    </symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24">
+      <path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z" />
+      <path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65" />
+      <path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65" />
+    </symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></symbol>
+
+    <!-- Services icons -->
+    <symbol id="i-server" viewBox="0 0 24 24">
+      <rect x="3" y="2.5" width="18" height="5.5" rx="1.5" />
+      <rect x="3" y="9.25" width="18" height="5.5" rx="1.5" />
+      <rect x="3" y="16" width="18" height="5.5" rx="1.5" />
+      <path d="M7 5.25h.01M7 12h.01M7 18.75h.01" />
+    </symbol>
+    <symbol id="i-network" viewBox="0 0 24 24">
+      <rect x="9" y="2" width="6" height="6" rx="1" />
+      <rect x="2" y="16" width="6" height="6" rx="1" />
+      <rect x="9" y="16" width="6" height="6" rx="1" />
+      <rect x="16" y="16" width="6" height="6" rx="1" />
+      <path d="M5 16v-2.5a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1V16M12 8v8" />
+    </symbol>
+    <symbol id="i-cpu" viewBox="0 0 24 24">
+      <rect x="4" y="4" width="16" height="16" rx="2" />
+      <circle cx="12" cy="12" r="3" />
+      <path d="M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2" />
+    </symbol>
+    <symbol id="i-brain" viewBox="0 0 24 24">
+      <path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z" />
+      <path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z" />
+      <path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4" />
+      <path d="M17.599 6.5a3 3 0 0 0 .399-1.375M6.003 5.125A3 3 0 0 0 6.401 6.5M3.477 10.896a4 4 0 0 1 .585-.396M19.938 10.5a4 4 0 0 1 .585.396M6 18a4 4 0 0 1-1.967-.516M19.967 17.484A4 4 0 0 1 18 18" />
+    </symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m18 16 4-4-4-4M6 8l-4 4 4 4M14.5 4l-5 16" /></symbol>
+    <symbol id="i-gear" viewBox="0 0 24 24">
+      <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" />
+      <circle cx="12" cy="12" r="3" />
+    </symbol>
+    <symbol id="i-clipboard" viewBox="0 0 24 24">
+      <rect x="8" y="2" width="8" height="4" rx="1" />
+      <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2M12 11h4M12 16h4M8 11h.01M8 16h.01" />
+    </symbol>
+    <symbol id="i-cloud-upload" viewBox="0 0 24 24">
+      <path d="M12 13v8M4 14.9A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.24M8 17l4-4 4 4" />
+    </symbol>
+    <symbol id="i-package" viewBox="0 0 24 24">
+      <path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z" />
+      <path d="M12 22V12M3.3 7l7.7 4.73a2 2 0 0 0 2 0L20.7 7M7.5 4.27l9 5.15" />
+    </symbol>
+    <symbol id="i-key" viewBox="0 0 24 24">
+      <path d="M2.59 17.41A2 2 0 0 0 2 18.83V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.17a2 2 0 0 0 1.42-.59l.81-.81a6.5 6.5 0 1 0-4-4z" />
+      <circle cx="16.5" cy="7.5" r="1" />
+    </symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24">
+      <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2M15 18H9M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62l-3.48-4.35A1 1 0 0 0 17.52 8H14" />
+      <circle cx="17" cy="18" r="2" /><circle cx="7" cy="18" r="2" />
+    </symbol>
+    <symbol id="i-activity" viewBox="0 0 24 24">
+      <path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2" />
+    </symbol>
+    <symbol id="i-headset" viewBox="0 0 24 24">
+      <path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z" />
+      <path d="M21 16v2a4 4 0 0 1-4 4h-5" />
+    </symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24">
+      <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8M21 3v5h-5M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16M8 16H3v5" />
+    </symbol>
+    <symbol id="i-laptop" viewBox="0 0 24 24">
+      <path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16" />
+    </symbol>
+    <symbol id="i-database" viewBox="0 0 24 24">
+      <ellipse cx="12" cy="5" rx="9" ry="3" />
+      <path d="M3 5v14a9 3 0 0 0 18 0V5M3 12a9 3 0 0 0 18 0" />
+    </symbol>
+    <symbol id="i-workflow" viewBox="0 0 24 24">
+      <rect x="3" y="3" width="8" height="8" rx="2" />
+      <rect x="13" y="13" width="8" height="8" rx="2" />
+      <path d="M7 11v4a2 2 0 0 0 2 2h4" />
+    </symbol>
+    <symbol id="i-sparkles" viewBox="0 0 24 24">
+      <path d="M9.94 15.5A2 2 0 0 0 8.5 14.06l-6.14-1.58a.5.5 0 0 1 0-.96L8.5 9.94A2 2 0 0 0 9.94 8.5l1.58-6.14a.5.5 0 0 1 .96 0l1.58 6.14a2 2 0 0 0 1.44 1.44l6.14 1.58a.5.5 0 0 1 0 .96l-6.14 1.58a2 2 0 0 0-1.44 1.44l-1.58 6.14a.5.5 0 0 1-.96 0z" />
+      <path d="M20 3v4M22 5h-4M4 17v2M5 18H3" />
+    </symbol>
+    <symbol id="i-bot" viewBox="0 0 24 24">
+      <path d="M12 8V4H8M2 14h2M20 14h2M15 13v2M9 13v2" />
+      <rect x="4" y="8" width="16" height="12" rx="2" />
+    </symbol>
+    <symbol id="i-message" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" /></symbol>
+    <symbol id="i-compass" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="10" />
+      <path d="m16.24 7.76-1.8 5.41a2 2 0 0 1-1.27 1.27L7.76 16.24l1.8-5.41a2 2 0 0 1 1.27-1.27z" />
+    </symbol>
+    <symbol id="i-plug" viewBox="0 0 24 24"><path d="M12 22v-5M9 8V2M15 8V2M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z" /></symbol>
+    <symbol id="i-smartphone" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" /><path d="M12 18h.01" /></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24">
+      <rect x="6.5" y="5" width="3.5" height="14" rx="1" fill="currentColor" stroke="none" />
+      <rect x="14" y="5" width="3.5" height="14" rx="1" fill="currentColor" stroke="none" />
+    </symbol>
+    <symbol id="i-check-filled" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="10" fill="currentColor" stroke="none" />
+      <path d="m8 12.4 2.7 2.6L16.2 9.6" fill="none" stroke="#fff" stroke-width="2.2" />
+    </symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+      <path d="M7 8h10M7 12h6" />
+    </symbol>
+    <symbol id="i-lightbulb" viewBox="0 0 24 24">
+      <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5M9 18h6M10 22h4" />
+    </symbol>
+    <symbol id="i-heart-pulse" viewBox="0 0 24 24">
+      <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+      <path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27" />
+    </symbol>
+    <symbol id="i-landmark" viewBox="0 0 24 24"><path d="M3 22h18M6 18v-7M10 18v-7M14 18v-7M18 18v-7M12 2l8 5H4z" /></symbol>
+    <symbol id="i-cart" viewBox="0 0 24 24">
+      <circle cx="8" cy="21" r="1" /><circle cx="19" cy="21" r="1" />
+      <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+    </symbol>
+    <symbol id="i-factory" viewBox="0 0 24 24">
+      <path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z" />
+      <path d="M17 18h1M12 18h1M7 18h1" />
+    </symbol>
+    <symbol id="i-graduation" viewBox="0 0 24 24">
+      <path d="M21.42 10.92a1 1 0 0 0-.02-1.84L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.83l8.57 3.91a2 2 0 0 0 1.66 0z" />
+      <path d="M22 10v6M6 12.5V16a6 3 0 0 0 12 0v-3.5" />
+    </symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="6" /><circle cx="12" cy="12" r="2" /></symbol>
+    <symbol id="i-quote" viewBox="0 0 24 24">
+      <path d="M10 11H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6c0 2.5-1.5 4-4 4.5M19 11h-4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6c0 2.5-1.5 4-4 4.5" />
+    </symbol>
+    <symbol id="i-chat-dots" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" /><path d="M8 12h.01M12 12h.01M16 12h.01" /></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24">
+      <path d="m15.48 12.89 1.51 8.52a.5.5 0 0 1-.81.47l-3.58-2.69a1 1 0 0 0-1.2 0l-3.59 2.69a.5.5 0 0 1-.81-.47l1.51-8.52" /><circle cx="12" cy="8" r="6" />
+    </symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" /><path d="M14 2v4a2 2 0 0 0 2 2h4M10 9H8M16 13H8M16 17H8" /></symbol>
+    <symbol id="i-video" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="3" /><path d="m10 9 5 3-5 3z" /></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z" /></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" /><path d="M16 2v4M8 2v4M3 10h18" /></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24">
+      <path d="M11.53 2.3a.53.53 0 0 1 .94 0l2.31 4.68a2.12 2.12 0 0 0 1.6 1.16l5.16.76a.53.53 0 0 1 .3.9l-3.74 3.64a2.12 2.12 0 0 0-.61 1.88l.88 5.14a.53.53 0 0 1-.77.56l-4.62-2.43a2.12 2.12 0 0 0-1.97 0L6.4 21.01a.53.53 0 0 1-.77-.56l.88-5.14a2.12 2.12 0 0 0-.61-1.88L2.16 9.8a.53.53 0 0 1 .3-.9l5.16-.76a2.12 2.12 0 0 0 1.6-1.16z" />
+    </symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="5" /><path d="M20 21a8 8 0 0 0-16 0" /></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></symbol>
+    <symbol id="i-building" viewBox="0 0 24 24">
+      <rect x="4" y="2" width="16" height="20" rx="2" /><path d="M9 22v-4h6v4M8 6h.01M12 6h.01M16 6h.01M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01" />
+    </symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24">
+      <rect x="3" y="3" width="7" height="7" rx="1" /><rect x="14" y="3" width="7" height="7" rx="1" /><rect x="14" y="14" width="7" height="7" rx="1" /><rect x="3" y="14" width="7" height="7" rx="1" />
+    </symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.99-5.54 10.19-7.4 11.8a1 1 0 0 1-1.2 0C9.54 20.19 4 14.99 4 10a8 8 0 0 1 16 0" /><circle cx="12" cy="10" r="3" /></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z" /><rect x="2" y="9" width="4" height="12" /><circle cx="4" cy="4" r="2" /></symbol>
+    <symbol id="i-youtube" viewBox="0 0 24 24">
+      <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" /><path d="m10 15 5-3-5-3z" />
+    </symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18.9 2H22l-7.2 8.2L23 22h-6.6l-5.1-6.7L5.4 22H2.3l7.7-8.8L2 2h6.8l4.6 6.1zm-1.2 18h1.8L7.4 3.9H5.5z" fill="currentColor" stroke="none" /></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><path d="M12 7.5v5.5M12 16.5h.01" /></symbol>
+    <symbol id="i-zap" viewBox="0 0 24 24"><path d="M13 2 4.1 13.1a.6.6 0 0 0 .47.98H11l-1 7.9 8.9-11.1a.6.6 0 0 0-.47-.98H12Z" /></symbol>
+    <symbol id="i-trend-up" viewBox="0 0 24 24"><path d="m22 7-8.5 8.5-5-5L2 17" /><path d="M16 7h6v6" /></symbol>
+    <symbol id="i-sections" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10" /></symbol>
+    <symbol id="i-check-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12" /></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24">
+      <path d="M7.5 5.3v13.4L19 12Z" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+    </symbol>
+    <symbol id="i-users" viewBox="0 0 24 24">
+      <circle cx="12" cy="8.5" r="3.5" />
+      <path d="M5.5 20v-.5a6.5 6.5 0 0 1 13 0v.5" />
+      <circle cx="5" cy="10" r="2.5" />
+      <path d="M1.5 19v-1a4 4 0 0 1 3.5-3.97" />
+      <circle cx="19" cy="10" r="2.5" />
+      <path d="M22.5 19v-1a4 4 0 0 0-3.5-3.97" />
+    </symbol>
+    <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" /></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24">
+      <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1Z" />
+      <path d="m9 12 2 2 4-4" />
+    </symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24">
+      <rect x="3.5" y="15" width="4" height="6" rx="1" />
+      <rect x="10" y="12" width="4" height="9" rx="1" />
+      <rect x="16.5" y="9" width="4" height="12" rx="1" />
+      <path d="M3 10.5 8.5 6.5l3.5 2L20.5 3" />
+      <path d="M16.5 3h4v4" />
+    </symbol>
+  </svg>
+
+  <!-- ===================== Header ===================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#hero" aria-label="TECEZE — back to top">
+        <svg class="wordmark" aria-hidden="true"><use href="#wordmark" /></svg>
+      </a>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a class="nav-link is-active" href="#hero" aria-current="true">01. Hero</a></li>
+          <li><a class="nav-link" href="#about">02. About</a></li>
+          <li><a class="nav-link" href="#services">03. Services</a></li>
+          <li><a class="nav-link" href="#why-teceze">04. Why TECEZE</a></li>
+          <li><a class="nav-link" href="#industries">05. Industries</a></li>
+          <li class="nav-more">
+            <button class="nav-link nav-more__toggle" type="button" aria-expanded="false" aria-controls="more-menu">
+              More <svg class="icon" aria-hidden="true"><use href="#i-chevron" /></svg>
+            </button>
+            <ul class="nav-more__menu" id="more-menu">
+              <li><a class="nav-link" href="#case-studies">06. Case Studies</a></li>
+              <li><a class="nav-link" href="#testimonials">07. Testimonials</a></li>
+              <li><a class="nav-link" href="#insights">08. Insights</a></li>
+              <li><a class="nav-link" href="#contact">09. Contact</a></li>
+            </ul>
+          </li>
+        </ul>
+        <a class="btn btn--primary nav-cta-mobile" href="#contact">
+          Get in Touch <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg>
+        </a>
+      </nav>
+
+      <a class="btn btn--primary btn--header" href="#contact">
+        Get in Touch <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ===================== 01. Hero ===================== -->
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <div class="hero__bg" aria-hidden="true"></div>
+
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="pill reveal" style="--d:0">
+            <span class="pill__dot" aria-hidden="true"></span>
+            Technology Partner for a Better Tomorrow
+          </p>
+
+          <h1 class="hero__title" id="hero-title">
+            <span class="hero__headline reveal" style="--d:2">
+              Technology Solutions<br />
+              for a <span class="text-accent">Smarter Tomorrow.</span>
+            </span>
+          </h1>
+
+          <p class="hero__lead reveal" style="--d:3">
+            We help organisations build secure, scalable and future-ready
+            technology foundations to drive real business impact. From cybersecurity
+            and cloud to managed IT and AI, our experts design, run and support the
+            systems your business depends on, around the clock and around the world.
+          </p>
+
+          <div class="hero__actions reveal" style="--d:4">
+            <a class="btn btn--primary btn--lg" href="#services">
+              Explore Our Solutions <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg>
+            </a>
+            <span class="hero__divider" aria-hidden="true"></span>
+            <button class="play-btn" type="button" data-video-open aria-haspopup="dialog">
+              <span class="play-btn__icon"><svg aria-hidden="true"><use href="#i-play" /></svg></span>
+              Watch Video
+            </button>
+          </div>
+        </div>
+
+        <figure class="hero__media">
+          <!-- Animated backdrop behind the blob-shaped photo (decorative) -->
+          <span class="hero__orb hero__orb--a" aria-hidden="true"></span>
+          <span class="hero__orb hero__orb--b" aria-hidden="true"></span>
+          <span class="hero__orb hero__orb--c" aria-hidden="true"></span>
+          <span class="hero__ring" aria-hidden="true"><span></span></span>
+          <img class="hero__photo" src="assets/images/hero-building.jpg" width="1000" height="714"
+               alt="TECEZE headquarters, a modern glass office building at dusk"
+               fetchpriority="high" decoding="async" />
+        </figure>
+      </div>
+
+      <div class="container">
+        <ul class="stats reveal" style="--d:5" aria-label="TECEZE at a glance">
+          <li class="stat">
+            <span class="stat__icon"><svg class="icon" aria-hidden="true"><use href="#i-users" /></svg></span>
+            <div>
+              <p class="stat__value" data-count="100" data-suffix="+">100+</p>
+              <p class="stat__label">Happy Clients</p>
+            </div>
+          </li>
+          <li class="stat">
+            <span class="stat__icon"><svg class="icon" aria-hidden="true"><use href="#i-cloud" /></svg></span>
+            <div>
+              <p class="stat__value" data-count="99.9" data-suffix="%">99.9%</p>
+              <p class="stat__label">System Uptime</p>
+            </div>
+          </li>
+          <li class="stat">
+            <span class="stat__icon"><svg class="icon" aria-hidden="true"><use href="#i-shield" /></svg></span>
+            <div>
+              <p class="stat__value">24/7</p>
+              <p class="stat__label">Support</p>
+            </div>
+          </li>
+          <li class="stat">
+            <span class="stat__icon"><svg class="icon" aria-hidden="true"><use href="#i-chart" /></svg></span>
+            <div>
+              <p class="stat__value" data-count="30" data-suffix="%">30%</p>
+              <p class="stat__label">Faster Issue Resolution</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== 02. About — Trust & Credibility ===================== -->
+    <section class="section trust" id="about" aria-labelledby="trust-title" data-motion="running">
+      <div class="frame-clip" aria-hidden="true">
+        <div class="trust__globe">
+          <canvas data-globe></canvas>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="trust__top">
+          <p class="eyebrow trust__eyebrow" data-reveal>
+            <span class="eyebrow__num">02</span>
+            Trust &amp; Credibility
+          </p>
+          <div class="trust__intro" data-reveal>
+            <h2 class="section-title" id="trust-title">
+              Trusted by Businesses<br />
+              Across the <span class="text-accent">Globe</span>
+            </h2>
+            <p class="section-lead">
+              Helping organisations strengthen their technology infrastructure
+              and accelerate digital transformation.
+            </p>
+          </div>
+
+          <ul class="trust__stats" aria-label="TECEZE in numbers">
+            <li class="trust-card trust-card--blue" data-reveal style="--d:1">
+              <span class="trust-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-globe" /></svg></span>
+              <p class="trust-card__value" data-count="100" data-suffix="+">100+</p>
+              <p class="trust-card__label">Countries served</p>
+            </li>
+            <li class="trust-card trust-card--green" data-reveal style="--d:2">
+              <span class="trust-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-layers" /></svg></span>
+              <p class="trust-card__value" data-count="5000" data-suffix="+">5,000+</p>
+              <p class="trust-card__label">Projects delivered</p>
+            </li>
+            <li class="trust-card trust-card--purple" data-reveal style="--d:3">
+              <span class="trust-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-users" /></svg></span>
+              <p class="trust-card__value" data-count="1000" data-suffix="+">1,000+</p>
+              <p class="trust-card__label">Technology professionals</p>
+            </li>
+            <li class="trust-card trust-card--amber" data-reveal style="--d:4">
+              <span class="trust-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-clock" /></svg></span>
+              <p class="trust-card__value">24/7</p>
+              <p class="trust-card__label">IT support availability</p>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== Client logos (no number) ===================== -->
+    <section class="logos-band" aria-label="Our clients">
+      <div class="container">
+        <!-- Logos scroll in an endless loop and pause on hover; JS clones the list to fill the strip. -->
+        <div class="marquee" id="client-logos" data-marquee data-reveal>
+          <ul class="marquee__track" aria-label="Our clients">
+            <li class="marquee__item"><img class="client-logo client-logo--straive" src="assets/logos/straive.webp" width="1063" height="240" alt="Straive" loading="lazy" /></li>
+            <li class="marquee__item"><img class="client-logo client-logo--trimble" src="assets/logos/trimble.webp" width="967" height="240" alt="Trimble" loading="lazy" /></li>
+            <li class="marquee__item"><img class="client-logo client-logo--virtusa" src="assets/logos/virtusa.webp" width="864" height="240" alt="Virtusa" loading="lazy" /></li>
+            <li class="marquee__item"><img class="client-logo client-logo--wipro" src="assets/logos/wipro.webp" width="322" height="240" alt="Wipro" loading="lazy" /></li>
+            <li class="marquee__item"><img class="client-logo client-logo--zoho" src="assets/logos/zoho.webp" width="576" height="240" alt="Zoho" loading="lazy" /></li>
+            <li class="marquee__item"><img class="client-logo client-logo--larsen-toubro" src="assets/logos/larsen-toubro.webp" width="1183" height="240" alt="Larsen &amp; Toubro" loading="lazy" /></li>
+            <li class="marquee__item"><img class="client-logo client-logo--hcl" src="assets/logos/hcl.webp" width="1526" height="240" alt="HCL" loading="lazy" /></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 03. Services ===================== -->
+    <section class="section services" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <p class="eyebrow" data-reveal>
+          <span class="eyebrow__num">03</span>
+          Our Services
+        </p>
+        <h2 class="section-title" id="services-title" data-reveal style="--d:1">
+          Technology Solutions <span class="text-accent">for Every Possibility</span>
+        </h2>
+        <p class="section-lead" data-reveal style="--d:2">
+          Explore our comprehensive range of technology services designed to help
+          enterprises operate securely, efficiently, and at scale.
+        </p>
+
+        <!--
+          The panel shows the first service so the page works without JS.
+          JS re-renders it from the "services-data" JSON below, so edit service
+          text, features and images there.
+        -->
+        <div class="services__showcase" data-services data-reveal style="--d:3">
+          <!-- The tab row comes first for keyboard and screen-reader order; CSS shows it at the bottom of the card. The active tab's icon ring shows autoplay progress. -->
+          <div class="service-tabs">
+            <div class="service-tabs__list" role="tablist" aria-label="Services">
+              <button class="service-tab" type="button" role="tab" id="service-tab-cybersecurity" data-service="cybersecurity" aria-controls="service-panel" aria-selected="true">
+                <span class="service-tab__icon"><svg class="icon" aria-hidden="true"><use href="#i-shield" /></svg></span><span>Cybersecurity</span>
+              </button>
+              <button class="service-tab" type="button" role="tab" id="service-tab-cloud-solutions" data-service="cloud-solutions" aria-controls="service-panel" aria-selected="false" tabindex="-1">
+                <span class="service-tab__icon"><svg class="icon" aria-hidden="true"><use href="#i-cloud" /></svg></span><span>Cloud Solutions</span>
+              </button>
+              <button class="service-tab" type="button" role="tab" id="service-tab-global-procurement" data-service="global-procurement" aria-controls="service-panel" aria-selected="false" tabindex="-1">
+                <span class="service-tab__icon"><svg class="icon" aria-hidden="true"><use href="#i-globe" /></svg></span><span>Global Procurement</span>
+              </button>
+              <button class="service-tab" type="button" role="tab" id="service-tab-managed-it" data-service="managed-it" aria-controls="service-panel" aria-selected="false" tabindex="-1">
+                <span class="service-tab__icon"><svg class="icon" aria-hidden="true"><use href="#i-server" /></svg></span><span>Managed IT Services</span>
+              </button>
+              <button class="service-tab" type="button" role="tab" id="service-tab-app-development" data-service="app-development" aria-controls="service-panel" aria-selected="false" tabindex="-1">
+                <span class="service-tab__icon"><svg class="icon" aria-hidden="true"><use href="#i-code" /></svg></span><span>Application Development</span>
+              </button>
+              <button class="service-tab" type="button" role="tab" id="service-tab-it-infrastructure" data-service="it-infrastructure" aria-controls="service-panel" aria-selected="false" tabindex="-1">
+                <span class="service-tab__icon"><svg class="icon" aria-hidden="true"><use href="#i-network" /></svg></span><span>IT Infrastructure</span>
+              </button>
+              <button class="service-tab" type="button" role="tab" id="service-tab-field-services" data-service="field-services" aria-controls="service-panel" aria-selected="false" tabindex="-1">
+                <span class="service-tab__icon"><svg class="icon" aria-hidden="true"><use href="#i-pin" /></svg></span><span>Global Field Services</span>
+              </button>
+              <button class="service-tab" type="button" role="tab" id="service-tab-ai-automation" data-service="ai-automation" aria-controls="service-panel" aria-selected="false" tabindex="-1">
+                <span class="service-tab__icon"><svg class="icon" aria-hidden="true"><use href="#i-brain" /></svg></span><span>AI &amp; Automation</span>
+              </button>
+              <button class="service-tab" type="button" role="tab" id="service-tab-consulting" data-service="consulting" aria-controls="service-panel" aria-selected="false" tabindex="-1">
+                <span class="service-tab__icon"><svg class="icon" aria-hidden="true"><use href="#i-users" /></svg></span><span>Consulting Services</span>
+              </button>
+            </div>
+          </div>
+          <div class="service-panel">
+            <div class="service-panel__body" id="service-panel" role="tabpanel" aria-labelledby="service-tab-cybersecurity" tabindex="0">
+              <div class="service-panel__top">
+                <p class="service-badge">
+                <svg class="icon" aria-hidden="true"><use href="#i-shield" data-slot="icon" /></svg>
+                <span><span data-slot="number">01</span> / <span data-slot="total">09</span></span>
+              </p>
+                <button class="toggle-btn autoplay-toggle" type="button" data-service-toggle data-state="playing" aria-controls="service-panel" aria-label="Pause autoplay">
+                  <svg class="icon toggle-btn__pause" aria-hidden="true"><use href="#i-pause" /></svg>
+                  <svg class="icon toggle-btn__play" aria-hidden="true"><use href="#i-play" /></svg>
+                </button>
+              </div>
+              <h3 class="service-panel__title" data-slot="title">Cybersecurity Services</h3>
+              <p class="service-panel__desc" data-slot="description">
+                Protect your business from evolving cyber threats with comprehensive security
+                solutions, proactive monitoring, and expert‑led risk management.
+              </p>
+              <ul class="service-features" data-slot="features">
+                <li><span class="service-features__icon"><svg class="icon" aria-hidden="true"><use href="#i-shield" /></svg></span>Threat detection &amp; response</li>
+                <li><span class="service-features__icon"><svg class="icon" aria-hidden="true"><use href="#i-gear" /></svg></span>Compliance support</li>
+                <li><span class="service-features__icon"><svg class="icon" aria-hidden="true"><use href="#i-clipboard" /></svg></span>Risk assessments</li>
+                <li><span class="service-features__icon"><svg class="icon" aria-hidden="true"><use href="#i-users" /></svg></span>Security awareness training</li>
+              </ul>
+              <a class="btn btn--primary btn--lg service-panel__cta" href="#contact" data-slot="cta">
+                <span data-slot="cta-label">Explore Cybersecurity</span>
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg>
+              </a>
+            </div>
+
+            <div class="service-panel__media">
+              <img class="service-panel__img is-current" src="assets/images/services/cybersecurity.webp"
+                   width="864" height="390" alt="Glowing security shield with a padlock, surrounded by threat detection, data protection, cloud and network security panels" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service content. Keys match each tab's data-service; icons are ids from the SVG sprite above.
+           An optional "video" (a YouTube video id) shows a play button over the image that plays the video in place. -->
+      <script type="application/json" id="services-data">
+        [
+          {
+            "id": "cybersecurity",
+            "icon": "i-shield",
+            "title": "Cybersecurity Services",
+            "description": "Protect your business from evolving cyber threats with comprehensive security solutions, proactive monitoring, and expert‑led risk management.",
+            "features": [
+              ["i-shield", "Threat detection & response"],
+              ["i-gear", "Compliance support"],
+              ["i-clipboard", "Risk assessments"],
+              ["i-users", "Security awareness training"]
+            ],
+            "cta": "Explore Cybersecurity",
+            "image": "assets/images/services/cybersecurity.webp",
+            "alt": "Glowing security shield with a padlock, surrounded by threat detection, data protection, cloud and network security panels"
+          },
+          {
+            "id": "cloud-solutions",
+            "icon": "i-cloud",
+            "title": "Cloud Solutions",
+            "description": "Migrate, modernise and run your workloads on secure, cost-efficient cloud platforms that scale with your business.",
+            "features": [
+              ["i-cloud-upload", "Cloud migration & modernisation"],
+              ["i-layers", "Hybrid & multi-cloud architecture"],
+              ["i-chart", "Cost optimisation"],
+              ["i-clock", "24/7 cloud operations"]
+            ],
+            "cta": "Explore Cloud Solutions",
+            "image": "assets/images/services/cloud-solutions.webp",
+            "alt": "Glowing cloud with upload and download arrows, surrounded by infrastructure, migration, security and collaboration panels"
+          },
+          {
+            "id": "global-procurement",
+            "icon": "i-globe",
+            "title": "Global Procurement",
+            "description": "Source the right hardware, software and licences worldwide with transparent pricing, trusted vendors and on-time delivery.",
+            "features": [
+              ["i-package", "Hardware & software sourcing"],
+              ["i-key", "Licence management"],
+              ["i-users", "Vendor management"],
+              ["i-truck", "Global logistics & delivery"]
+            ],
+            "cta": "Explore Procurement",
+            "image": "assets/images/services/global-procurement.webp",
+            "alt": "Glowing globe linked to supplier management, sourcing, contracts, spend analytics and supply chain panels"
+          },
+          {
+            "id": "managed-it",
+            "icon": "i-server",
+            "title": "Managed IT Services",
+            "description": "Keep every system running at its best with proactive monitoring, routine maintenance and a responsive service desk.",
+            "features": [
+              ["i-activity", "24/7 monitoring & alerting"],
+              ["i-headset", "Service desk support"],
+              ["i-refresh", "Patch & update management"],
+              ["i-chart", "SLA-backed reporting"]
+            ],
+            "cta": "Explore Managed IT",
+            "image": "assets/images/services/managed-it.webp",
+            "alt": "Server rack inside a cloud with monitoring, helpdesk, cloud, cybersecurity, infrastructure and consulting panels"
+          },
+          {
+            "id": "app-development",
+            "icon": "i-code",
+            "title": "Application Development",
+            "description": "Build secure, scalable web and mobile applications with agile delivery, modern frameworks and ongoing support.",
+            "features": [
+              ["i-smartphone", "Web & mobile apps"],
+              ["i-code", "Custom software"],
+              ["i-plug", "APIs & integrations"],
+              ["i-check-circle", "QA & testing"]
+            ],
+            "cta": "Explore App Development",
+            "image": "assets/images/services/app-development.webp",
+            "alt": "Laptop showing code with web and mobile app screens, surrounded by custom software, integration, API, cloud-native and support panels"
+          },
+          {
+            "id": "it-infrastructure",
+            "icon": "i-network",
+            "title": "IT Infrastructure",
+            "description": "Design, build and support resilient networks, data centres and workplace technology that keep your teams connected.",
+            "features": [
+              ["i-network", "Network design & deployment"],
+              ["i-server", "Data centre solutions"],
+              ["i-laptop", "End-user computing"],
+              ["i-database", "Backup & disaster recovery"]
+            ],
+            "cta": "Explore Infrastructure",
+            "image": "assets/images/services/it-infrastructure.webp",
+            "alt": "AI assistant at the centre of a digital workplace, linked to IT support, workplace tools, automated operations, security and insights panels"
+          },
+          {
+            "id": "field-services",
+            "icon": "i-pin",
+            "title": "Global Field Services",
+            "description": "Skilled engineers on the ground wherever you operate, with real-time tracking, guided workflows and SLA-driven service delivery.",
+            "features": [
+              ["i-users", "Workforce scheduling & dispatch"],
+              ["i-pin", "Asset tracking & visibility"],
+              ["i-headset", "Remote expert support"],
+              ["i-file", "Service reporting & compliance"]
+            ],
+            "cta": "Explore Field Services",
+            "image": "assets/images/services/field-services.webp",
+            "alt": "Glowing globe linked to workforce management, asset tracking, field service, predictive maintenance, remote support and reporting panels"
+          },
+          {
+            "id": "ai-automation",
+            "icon": "i-brain",
+            "title": "AI & Automation",
+            "description": "Put AI and intelligent automation to work, from predictive insight to bots that take repetitive tasks off your team's plate.",
+            "features": [
+              ["i-bot", "Intelligent process automation"],
+              ["i-brain", "Machine learning models"],
+              ["i-sparkles", "Generative AI solutions"],
+              ["i-message", "Chatbots & virtual assistants"]
+            ],
+            "cta": "Explore AI & Automation",
+            "image": "assets/images/services/ai-automation.webp",
+            "alt": "AI robot beneath a glowing brain, linked to process automation, generative content, data insights, assistants and workflow panels"
+          },
+          {
+            "id": "consulting",
+            "icon": "i-users",
+            "title": "Consulting Services",
+            "description": "Get independent, expert guidance on technology strategy, architecture and investment decisions that support your business goals.",
+            "features": [
+              ["i-compass", "IT strategy & roadmaps"],
+              ["i-layers", "Architecture reviews"],
+              ["i-check-circle", "Vendor-neutral advisory"],
+              ["i-clipboard", "Programme governance"]
+            ],
+            "cta": "Explore Consulting",
+            "image": "assets/images/services/consulting.webp",
+            "alt": "Glowing globe surrounded by professional profiles, linked to talent acquisition, workforce management, onboarding and engagement panels"
+          }
+        ]
+      </script>
+    </section>
+
+    <!-- ===================== 04. Why TECEZE ===================== -->
+    <section class="section why" id="why-teceze" aria-labelledby="why-title">
+      <div class="container">
+        <div class="why__head">
+          <p class="eyebrow why__eyebrow" data-reveal>
+            <span class="eyebrow__num">04</span>
+            Why TECEZE
+          </p>
+          <a class="btn btn--primary btn--lg why__cta" href="#contact" data-reveal style="--d:1">
+            Discover Why TECEZE <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg>
+          </a>
+          <h2 class="section-title why__title" id="why-title" data-reveal style="--d:1">
+            Technology Expertise. Global Reach. <span class="text-accent">Reliable Delivery.</span>
+          </h2>
+          <p class="section-lead why__lead" data-reveal style="--d:2">
+            We combine deep technical expertise, global delivery capabilities and a
+            customer-first approach to help businesses build resilient, future‑ready operations.
+          </p>
+        </div>
+
+        <!-- Expanding panels: one is open at a time; click a strip or use the arrows -->
+        <div class="why-acc" data-why-acc data-reveal style="--d:2">
+          <div class="why-acc__intro">
+            <p class="why-acc__heading">Why clients choose us.<br /><span>Built around you.</span></p>
+            <div class="why-acc__nav">
+              <button class="icon-btn" type="button" data-why-prev aria-label="Previous reason"><svg class="icon" aria-hidden="true"><use href="#i-chevron-left" /></svg></button>
+              <button class="icon-btn" type="button" data-why-next aria-label="Next reason"><svg class="icon" aria-hidden="true"><use href="#i-chevron-right" /></svg></button>
+            </div>
+          </div>
+          <ol class="why-acc__panels">
+            <li class="why-acc__panel" style="--i:0">
+              <button class="why-acc__toggle" type="button" id="why-acc-btn-1" aria-expanded="false" aria-controls="why-acc-body-1">
+                <span class="why-acc__num">01</span>
+                <span class="why-acc__label">Global Service Delivery</span>
+              </button>
+              <div class="why-acc__body" id="why-acc-body-1" role="region" aria-labelledby="why-acc-btn-1">
+                <span class="why-acc__icon"><svg class="icon" aria-hidden="true"><use href="#i-globe" /></svg></span>
+                <h3 class="why-acc__title">Global Service Delivery</h3>
+                <p class="why-acc__desc">Supporting businesses across 100+ countries with consistent, high-quality service delivery.</p>
+                <ul class="why-acc__list"><li><span class="why-acc__pt-icon"><svg class="icon" aria-hidden="true"><use href="#i-globe" /></svg></span>Global delivery model</li><li><span class="why-acc__pt-icon"><svg class="icon" aria-hidden="true"><use href="#i-users" /></svg></span>Local support teams</li><li><span class="why-acc__pt-icon"><svg class="icon" aria-hidden="true"><use href="#i-headset" /></svg></span>24/7 support capability</li></ul>
+                <ul class="why-acc__stats"><li><strong>100+</strong>Countries served</li><li><strong>12</strong>Delivery hubs</li><li><strong>24/7</strong>Follow-the-sun cover</li></ul>
+              </div>
+            </li>
+            <li class="why-acc__panel" style="--i:1">
+              <button class="why-acc__toggle" type="button" id="why-acc-btn-2" aria-expanded="false" aria-controls="why-acc-body-2">
+                <span class="why-acc__num">02</span>
+                <span class="why-acc__label">Experienced Professionals</span>
+              </button>
+              <div class="why-acc__body" id="why-acc-body-2" role="region" aria-labelledby="why-acc-btn-2">
+                <span class="why-acc__icon"><svg class="icon" aria-hidden="true"><use href="#i-users" /></svg></span>
+                <h3 class="why-acc__title">Experienced Professionals</h3>
+                <p class="why-acc__desc">A skilled team of technology experts delivering reliable solutions for complex business needs.</p>
+                <ul class="why-acc__list"><li><span class="why-acc__pt-icon"><svg class="icon" aria-hidden="true"><use href="#i-users" /></svg></span>1,000+ professionals</li><li><span class="why-acc__pt-icon"><svg class="icon" aria-hidden="true"><use href="#i-award" /></svg></span>Specialised expertise</li><li><span class="why-acc__pt-icon"><svg class="icon" aria-hidden="true"><use href="#i-book" /></svg></span>Continuous learning &amp; upskilling</li></ul>
+                <ul class="why-acc__stats"><li><strong>1,000+</strong>Technology experts</li><li><strong>300+</strong>Industry certifications</li><li><strong>12+ yrs</strong>Average experience</li></ul>
+              </div>
+            </li>
+            <li class="why-acc__panel" style="--i:2">
+              <button class="why-acc__toggle" type="button" id="why-acc-btn-3" aria-expanded="false" aria-controls="why-acc-body-3">
+                <span class="why-acc__num">03</span>
+                <span class="why-acc__label">Scalable Solutions</span>
+              </button>
+              <div class="why-acc__body" id="why-acc-body-3" role="region" aria-labelledby="why-acc-btn-3">
+                <span class="why-acc__icon"><svg class="icon" aria-hidden="true"><use href="#i-layers" /></svg></span>
+                <h3 class="why-acc__title">Scalable Solutions</h3>
+                <p class="why-acc__desc">Flexible and future-ready solutions designed to grow with your business requirements.</p>
+                <ul class="why-acc__list"><li><span class="why-acc__pt-icon"><svg class="icon" aria-hidden="true"><use href="#i-gear" /></svg></span>Tailored to your needs</li><li><span class="why-acc__pt-icon"><svg class="icon" aria-hidden="true"><use href="#i-server" /></svg></span>Scalable infrastructure</li><li><span class="why-acc__pt-icon"><svg class="icon" aria-hidden="true"><use href="#i-check-circle" /></svg></span>Support at every stage</li></ul>
+                <ul class="why-acc__stats"><li><strong>5,000+</strong>Projects delivered</li><li><strong>99.9%</strong>Platform uptime</li><li><strong>3x</strong>Faster scale-up</li></ul>
+              </div>
+            </li>
+            <li class="why-acc__panel is-active" style="--i:3">
+              <button class="why-acc__toggle" type="button" id="why-acc-btn-4" aria-expanded="true" aria-controls="why-acc-body-4">
+                <span class="why-acc__num">04</span>
+                <span class="why-acc__label">Proactive IT Management</span>
+              </button>
+              <div class="why-acc__body" id="why-acc-body-4" role="region" aria-labelledby="why-acc-btn-4">
+                <span class="why-acc__icon"><svg class="icon" aria-hidden="true"><use href="#i-shield" /></svg></span>
+                <h3 class="why-acc__title">Proactive IT Management</h3>
+                <p class="why-acc__desc">Minimise disruptions and ensure business continuity with proactive monitoring and management.</p>
+                <ul class="why-acc__list"><li><span class="why-acc__pt-icon"><svg class="icon" aria-hidden="true"><use href="#i-activity" /></svg></span>Proactive monitoring</li><li><span class="why-acc__pt-icon"><svg class="icon" aria-hidden="true"><use href="#i-clock" /></svg></span>Faster issue resolution</li><li><span class="why-acc__pt-icon"><svg class="icon" aria-hidden="true"><use href="#i-chart" /></svg></span>Improved operational efficiency</li></ul>
+                <ul class="why-acc__stats"><li><strong>40%</strong>Fewer incidents</li><li><strong>30%</strong>Faster resolution</li><li><strong>24/7</strong>Live monitoring</li></ul>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 05. Industries ===================== -->
+    <section class="section industries" id="industries" aria-labelledby="industries-title">
+      <div class="container">
+        <div class="industries__head">
+          <p class="eyebrow industries__eyebrow" data-reveal>
+            <span class="eyebrow__num">05</span>
+            Industries We Serve
+          </p>
+          <a class="btn btn--outline btn--lg industries__cta" href="#contact" data-reveal style="--d:1">
+            View All Industries <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg>
+          </a>
+          <h2 class="section-title industries__title" id="industries-title" data-reveal style="--d:1">
+            Industry Expertise for a <span class="text-accent">Smarter Tomorrow</span>
+          </h2>
+          <p class="section-lead industries__lead" data-reveal style="--d:2">
+            We work with organisations across diverse industries, delivering secure, scalable and
+            future&#8209;ready technology solutions tailored to their unique business needs.
+          </p>
+        </div>
+
+        <!-- Cards stick under the header and stack on top of each other as you scroll -->
+        <ol class="ind-stack" aria-label="Industries">
+          <li class="ind ind--blue" style="--i:0">
+            <div class="ind__content">
+              <div class="ind__tags"><span class="ind__tag"><svg class="icon" aria-hidden="true"><use href="#i-heart-pulse" /></svg>Healthcare</span></div><h3 class="ind__title">Healthcare</h3>
+              <p class="ind__desc">Secure systems, data protection and uninterrupted operations for modern healthcare providers.</p>
+              <ul class="ind__points"><li><span class="ind__pt-icon"><svg class="icon" aria-hidden="true"><use href="#i-shield" /></svg></span><span><strong>HIPAA-compliant solutions</strong>Meet industry regulations with confidence.</span></li><li><span class="ind__pt-icon"><svg class="icon" aria-hidden="true"><use href="#i-database" /></svg></span><span><strong>Data security &amp; protection</strong>Safeguard sensitive patient information.</span></li><li><span class="ind__pt-icon"><svg class="icon" aria-hidden="true"><use href="#i-laptop" /></svg></span><span><strong>Reliable infrastructure</strong>High availability for critical systems.</span></li><li><span class="ind__pt-icon"><svg class="icon" aria-hidden="true"><use href="#i-headset" /></svg></span><span><strong>24/7 support for critical systems</strong>Proactive monitoring and rapid response.</span></li></ul>
+              <a class="btn btn--lg ind__btn" href="#contact">Explore Healthcare Solutions <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+            </div>
+            <img class="ind__art" src="assets/images/industries/scenes/healthcare.jpg" width="825" height="680" alt="Illustration of a shield with a medical cross over secure servers" loading="lazy" />
+          </li>
+          <li class="ind ind--green" style="--i:1">
+            <div class="ind__content">
+              <div class="ind__tags"><span class="ind__tag"><svg class="icon" aria-hidden="true"><use href="#i-landmark" /></svg>Banking &amp; Finance</span><span class="ind__featured">★ Featured</span></div>
+              <h3 class="ind__title">Banking &amp; Finance</h3>
+              <p class="ind__desc">Robust cybersecurity, compliance and infrastructure reliability for a secure and resilient financial ecosystem.</p>
+              <ul class="ind__points"><li><span class="ind__pt-icon"><svg class="icon" aria-hidden="true"><use href="#i-shield" /></svg></span><span><strong>Regulatory compliance support</strong>Meet global and local financial regulations.</span></li><li><span class="ind__pt-icon"><svg class="icon" aria-hidden="true"><use href="#i-chart" /></svg></span><span><strong>Risk management and monitoring</strong>Proactive threat detection and mitigation.</span></li><li><span class="ind__pt-icon"><svg class="icon" aria-hidden="true"><use href="#i-database" /></svg></span><span><strong>Secure infrastructure and cloud</strong>Highly secure and scalable environments.</span></li><li><span class="ind__pt-icon"><svg class="icon" aria-hidden="true"><use href="#i-headset" /></svg></span><span><strong>24/7 support for critical operations</strong>Business continuity and rapid response.</span></li></ul>
+              <a class="btn btn--lg ind__btn" href="#contact">Explore Banking &amp; Finance Solutions <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+            </div>
+            <img class="ind__art" src="assets/images/industries/scenes/banking.jpg" width="825" height="680" alt="Illustration of a bank building protected by a padlock shield" loading="lazy" />
+          </li>
+          <li class="ind ind--purple" style="--i:2">
+            <div class="ind__content">
+              <div class="ind__tags"><span class="ind__tag"><svg class="icon" aria-hidden="true"><use href="#i-cart" /></svg>Retail</span></div><h3 class="ind__title">Retail</h3>
+              <p class="ind__desc">Connected operations, infrastructure and IT support for modern retail businesses.</p>
+              <ul class="ind__points"><li><span class="ind__pt-icon"><svg class="icon" aria-hidden="true"><use href="#i-smartphone" /></svg></span><span><strong>Omnichannel POS &amp; inventory</strong>Unified commerce across online and in-store channels.</span></li><li><span class="ind__pt-icon"><svg class="icon" aria-hidden="true"><use href="#i-cloud" /></svg></span><span><strong>In-store and cloud IT support</strong>Reliable support across every location.</span></li><li><span class="ind__pt-icon"><svg class="icon" aria-hidden="true"><use href="#i-shield" /></svg></span><span><strong>Secure payment infrastructure</strong>Protect customer data and ensure PCI compliance.</span></li><li><span class="ind__pt-icon"><svg class="icon" aria-hidden="true"><use href="#i-chart" /></svg></span><span><strong>Scalable infrastructure</strong>Flexible capacity for growth and seasonal demand.</span></li></ul>
+              <a class="btn btn--lg ind__btn" href="#contact">Explore Retail Solutions <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+            </div>
+            <img class="ind__art" src="assets/images/industries/scenes/retail.jpg" width="825" height="680" alt="Illustration of a shopping bag on a platform with a cart and parcels" loading="lazy" />
+          </li>
+          <li class="ind ind--amber" style="--i:3">
+            <div class="ind__content">
+              <div class="ind__tags"><span class="ind__tag"><svg class="icon" aria-hidden="true"><use href="#i-factory" /></svg>Manufacturing</span></div><h3 class="ind__title">Manufacturing</h3>
+              <p class="ind__desc">Reliable infrastructure and operational efficiency for intelligent manufacturing.</p>
+              <ul class="ind__points"><li><span class="ind__pt-icon"><svg class="icon" aria-hidden="true"><use href="#i-gear" /></svg></span><span><strong>OT and IT network integration</strong>Seamless connectivity across shop floor and enterprise.</span></li><li><span class="ind__pt-icon"><svg class="icon" aria-hidden="true"><use href="#i-shield" /></svg></span><span><strong>Secure data and operational systems</strong>Protect critical industrial data and IP.</span></li><li><span class="ind__pt-icon"><svg class="icon" aria-hidden="true"><use href="#i-activity" /></svg></span><span><strong>Predictive maintenance monitoring</strong>Minimise downtime with real-time insights.</span></li><li><span class="ind__pt-icon"><svg class="icon" aria-hidden="true"><use href="#i-headset" /></svg></span><span><strong>24/7 plant-floor support</strong>On-site and remote support for uninterrupted operations.</span></li></ul>
+              <a class="btn btn--lg ind__btn" href="#contact">Explore Manufacturing Solutions <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+            </div>
+            <img class="ind__art" src="assets/images/industries/scenes/manufacturing.jpg" width="825" height="680" alt="Robotic arms on a production line with monitoring dashboards" loading="lazy" />
+          </li>
+          <li class="ind ind--red" style="--i:4">
+            <div class="ind__content">
+              <div class="ind__tags"><span class="ind__tag"><svg class="icon" aria-hidden="true"><use href="#i-graduation" /></svg>Education</span></div><h3 class="ind__title">Education</h3>
+              <p class="ind__desc">Digital infrastructure, secure connectivity and enhanced learning experiences for modern educational institutions.</p>
+              <ul class="ind__points"><li><span class="ind__pt-icon"><svg class="icon" aria-hidden="true"><use href="#i-globe" /></svg></span><span><strong>Secure campus connectivity</strong>Reliable and secure network access across campuses.</span></li><li><span class="ind__pt-icon"><svg class="icon" aria-hidden="true"><use href="#i-shield" /></svg></span><span><strong>Student data protection</strong>Safeguard sensitive student and institutional data.</span></li><li><span class="ind__pt-icon"><svg class="icon" aria-hidden="true"><use href="#i-laptop" /></svg></span><span><strong>Digital classroom technology</strong>Engaging and seamless learning experiences.</span></li><li><span class="ind__pt-icon"><svg class="icon" aria-hidden="true"><use href="#i-cloud" /></svg></span><span><strong>On-site and remote IT support</strong>24/7 support for uninterrupted learning.</span></li></ul>
+              <a class="btn btn--lg ind__btn" href="#contact">Explore Education Solutions <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+            </div>
+            <img class="ind__art" src="assets/images/industries/scenes/education.jpg" width="825" height="680" alt="Laptop with learning content in front of a university building" loading="lazy" />
+          </li>
+          <li class="ind ind--sky" style="--i:5">
+            <div class="ind__content">
+              <div class="ind__tags"><span class="ind__tag"><svg class="icon" aria-hidden="true"><use href="#i-truck" /></svg>Logistics</span></div><h3 class="ind__title">Logistics</h3>
+              <p class="ind__desc">Reliable technology across distributed operations and supply chains.</p>
+              <ul class="ind__points"><li><span class="ind__pt-icon"><svg class="icon" aria-hidden="true"><use href="#i-pin" /></svg></span><span><strong>Real-time fleet &amp; shipment tracking</strong>End-to-end visibility across your supply chain.</span></li><li><span class="ind__pt-icon"><svg class="icon" aria-hidden="true"><use href="#i-database" /></svg></span><span><strong>Warehouse system integration</strong>Seamless connectivity with WMS, ERP and more.</span></li><li><span class="ind__pt-icon"><svg class="icon" aria-hidden="true"><use href="#i-shield" /></svg></span><span><strong>Resilient distributed networks</strong>Reliable, secure connectivity across locations.</span></li><li><span class="ind__pt-icon"><svg class="icon" aria-hidden="true"><use href="#i-gear" /></svg></span><span><strong>24/7 logistics IT support</strong>Proactive monitoring and rapid issue resolution.</span></li></ul>
+              <a class="btn btn--lg ind__btn" href="#contact">Explore Logistics Solutions <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+            </div>
+            <img class="ind__art" src="assets/images/industries/scenes/logistics.jpg" width="825" height="680" alt="Truck, warehouse, cargo ship and plane on a world map with tracking cards" loading="lazy" />
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== 06. Case Studies ===================== -->
+    <section class="section cases" id="case-studies" aria-labelledby="cases-title">
+      <div class="container">
+        <div class="split-head split-head--stacked">
+          <p class="eyebrow split-head__eyebrow" data-reveal>
+            <span class="eyebrow__num">06</span>
+            Case Studies / Success Stories
+          </p>
+          <h2 class="section-title split-head__title" id="cases-title" data-reveal style="--d:1">Real Challenges. <span class="text-accent">Proven Technology Solutions.</span></h2>
+          <p class="section-lead split-head__lead" data-reveal style="--d:2">Explore how we’ve helped organisations solve complex technology challenges, improve operational efficiency and achieve measurable results.</p>
+          <div class="split-head__actions" data-reveal style="--d:3">
+            <a class="btn btn--outline btn--lg" href="#contact">View All Success Stories <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+          </div>
+        </div>
+        <!-- Cards stick under the header and stack on top of each other as you scroll -->
+        <ol class="case-stack" aria-label="Case studies">
+          <li class="case case--purple" style="--i:0">
+            <div class="case__visual">
+              <span class="case__tag"><span class="case__tag-icon"><svg class="icon" aria-hidden="true"><use href="#i-heart-pulse" /></svg></span>Healthcare</span>
+              <h3 class="case__title">Strengthening IT Infrastructure for a Multi-Location <span>Healthcare Network</span></h3>
+              <p class="case__summary">We helped a leading healthcare provider modernise its IT infrastructure across multiple hospitals, improving uptime, security and operational efficiency.</p>
+              <a class="btn btn--lg case__btn" href="#contact">Read Full Case Study <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+            </div>
+            <div class="case__body">
+              <div class="case__cols">
+                <div class="case-box">
+                  <p class="case-box__label"><span class="case-box__icon case-box__icon--red"><svg class="icon" aria-hidden="true"><use href="#i-target" /></svg></span>The Challenge</p>
+                  <p class="case-box__text">Unreliable IT infrastructure across multiple hospitals leading to frequent downtime, security vulnerabilities and inconsistent user experiences for clinical staff.</p>
+                  <ul class="case-box__pills"><li class="case-pill case-pill--issue"><svg class="icon" aria-hidden="true"><use href="#i-alert" /></svg>Frequent system downtime</li><li class="case-pill case-pill--issue"><svg class="icon" aria-hidden="true"><use href="#i-alert" /></svg>Security vulnerabilities</li><li class="case-pill case-pill--issue"><svg class="icon" aria-hidden="true"><use href="#i-alert" /></svg>Inconsistent user experience</li></ul>
+                </div>
+                <div class="case-box">
+                  <p class="case-box__label"><span class="case-box__icon case-box__icon--purple"><svg class="icon" aria-hidden="true"><use href="#i-gear" /></svg></span>Our Solution</p>
+                  <p class="case-box__text">Implemented centralised infrastructure management with 24/7 monitoring, on-site support and enhanced security protocols across all locations.</p>
+                  <ul class="case-box__pills"><li class="case-pill case-pill--fix"><svg class="icon" aria-hidden="true"><use href="#i-check-circle" /></svg>Centralised IT management</li><li class="case-pill case-pill--fix"><svg class="icon" aria-hidden="true"><use href="#i-check-circle" /></svg>24/7 monitoring &amp; support</li><li class="case-pill case-pill--fix"><svg class="icon" aria-hidden="true"><use href="#i-check-circle" /></svg>Enhanced security protocols</li></ul>
+                </div>
+                <div class="case-box">
+                  <p class="case-box__label"><span class="case-box__icon case-box__icon--green"><svg class="icon" aria-hidden="true"><use href="#i-chart" /></svg></span>The Impact</p>
+                  <ul class="case-box__wins"><li class="case-win"><span class="case-win__head"><span class="case-win__icon"><svg class="icon" aria-hidden="true"><use href="#i-clock" /></svg></span><strong>99.9%</strong></span><span class="case-win__label">System uptime</span></li><li class="case-win"><span class="case-win__head"><span class="case-win__icon"><svg class="icon" aria-hidden="true"><use href="#i-zap" /></svg></span><strong>30%</strong></span><span class="case-win__label">Faster issue resolution</span></li><li class="case-win"><span class="case-win__head"><span class="case-win__icon"><svg class="icon" aria-hidden="true"><use href="#i-users" /></svg></span><strong>40%</strong></span><span class="case-win__label">Reduction in IT support tickets</span></li></ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="case case--orange" style="--i:1">
+            <div class="case__visual">
+              <span class="case__tag"><span class="case__tag-icon"><svg class="icon" aria-hidden="true"><use href="#i-factory" /></svg></span>Manufacturing</span>
+              <h3 class="case__title">Modernising IT Operations for a Global <span>Manufacturing Enterprise</span></h3>
+              <p class="case__summary">We unified IT operations for a manufacturer running plants on three continents, giving leadership one view of every site and far fewer production stoppages.</p>
+              <a class="btn btn--lg case__btn" href="#contact">Read Full Case Study <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+            </div>
+            <div class="case__body">
+              <div class="case__cols">
+                <div class="case-box">
+                  <p class="case-box__label"><span class="case-box__icon case-box__icon--red"><svg class="icon" aria-hidden="true"><use href="#i-target" /></svg></span>The Challenge</p>
+                  <p class="case-box__text">IT operations spread across global facilities with limited visibility, inconsistent processes and slow responses to incidents that halted production lines.</p>
+                  <ul class="case-box__pills"><li class="case-pill case-pill--issue"><svg class="icon" aria-hidden="true"><use href="#i-alert" /></svg>Limited operational visibility</li><li class="case-pill case-pill--issue"><svg class="icon" aria-hidden="true"><use href="#i-alert" /></svg>Inconsistent processes</li><li class="case-pill case-pill--issue"><svg class="icon" aria-hidden="true"><use href="#i-alert" /></svg>Slow incident response</li></ul>
+                </div>
+                <div class="case-box">
+                  <p class="case-box__label"><span class="case-box__icon case-box__icon--purple"><svg class="icon" aria-hidden="true"><use href="#i-gear" /></svg></span>Our Solution</p>
+                  <p class="case-box__text">Deployed a unified managed IT services model with standardised tools, a central service desk and proactive monitoring for plant-floor systems.</p>
+                  <ul class="case-box__pills"><li class="case-pill case-pill--fix"><svg class="icon" aria-hidden="true"><use href="#i-check-circle" /></svg>Unified service model</li><li class="case-pill case-pill--fix"><svg class="icon" aria-hidden="true"><use href="#i-check-circle" /></svg>Centralised service desk</li><li class="case-pill case-pill--fix"><svg class="icon" aria-hidden="true"><use href="#i-check-circle" /></svg>Proactive monitoring</li></ul>
+                </div>
+                <div class="case-box">
+                  <p class="case-box__label"><span class="case-box__icon case-box__icon--green"><svg class="icon" aria-hidden="true"><use href="#i-chart" /></svg></span>The Impact</p>
+                  <ul class="case-box__wins"><li class="case-win"><span class="case-win__head"><span class="case-win__icon"><svg class="icon" aria-hidden="true"><use href="#i-shield" /></svg></span><strong>40%</strong></span><span class="case-win__label">Reduction in IT incidents</span></li><li class="case-win"><span class="case-win__head"><span class="case-win__icon"><svg class="icon" aria-hidden="true"><use href="#i-trend-up" /></svg></span><strong>25%</strong></span><span class="case-win__label">Improvement in operational efficiency</span></li><li class="case-win"><span class="case-win__head"><span class="case-win__icon"><svg class="icon" aria-hidden="true"><use href="#i-clock" /></svg></span><strong>35%</strong></span><span class="case-win__label">Less unplanned downtime</span></li></ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="case case--green" style="--i:2">
+            <div class="case__visual">
+              <span class="case__tag"><span class="case__tag-icon"><svg class="icon" aria-hidden="true"><use href="#i-landmark" /></svg></span>Banking &amp; Finance</span>
+              <h3 class="case__title">Enhancing Cybersecurity and Compliance for a <span>Leading Financial Institution</span></h3>
+              <p class="case__summary">We strengthened the security posture of a regional bank, closing compliance gaps ahead of its regulatory audit and cutting security risk across the estate.</p>
+              <a class="btn btn--lg case__btn" href="#contact">Read Full Case Study <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+            </div>
+            <div class="case__body">
+              <div class="case__cols">
+                <div class="case-box">
+                  <p class="case-box__label"><span class="case-box__icon case-box__icon--red"><svg class="icon" aria-hidden="true"><use href="#i-target" /></svg></span>The Challenge</p>
+                  <p class="case-box__text">Ageing security infrastructure and manual processes made it hard to meet evolving regulatory requirements and detect threats quickly.</p>
+                  <ul class="case-box__pills"><li class="case-pill case-pill--issue"><svg class="icon" aria-hidden="true"><use href="#i-alert" /></svg>Manual, fragmented processes</li><li class="case-pill case-pill--issue"><svg class="icon" aria-hidden="true"><use href="#i-alert" /></svg>Regulatory compliance gaps</li><li class="case-pill case-pill--issue"><svg class="icon" aria-hidden="true"><use href="#i-alert" /></svg>Slow threat detection</li></ul>
+                </div>
+                <div class="case-box">
+                  <p class="case-box__label"><span class="case-box__icon case-box__icon--purple"><svg class="icon" aria-hidden="true"><use href="#i-gear" /></svg></span>Our Solution</p>
+                  <p class="case-box__text">Implemented a comprehensive cybersecurity framework with a 24/7 security operations centre, continuous monitoring and audit-ready compliance reporting.</p>
+                  <ul class="case-box__pills"><li class="case-pill case-pill--fix"><svg class="icon" aria-hidden="true"><use href="#i-check-circle" /></svg>24/7 security operations centre</li><li class="case-pill case-pill--fix"><svg class="icon" aria-hidden="true"><use href="#i-check-circle" /></svg>Continuous threat monitoring</li><li class="case-pill case-pill--fix"><svg class="icon" aria-hidden="true"><use href="#i-check-circle" /></svg>Audit-ready compliance reporting</li></ul>
+                </div>
+                <div class="case-box">
+                  <p class="case-box__label"><span class="case-box__icon case-box__icon--green"><svg class="icon" aria-hidden="true"><use href="#i-chart" /></svg></span>The Impact</p>
+                  <ul class="case-box__wins"><li class="case-win"><span class="case-win__head"><span class="case-win__icon"><svg class="icon" aria-hidden="true"><use href="#i-shield" /></svg></span><strong>60%</strong></span><span class="case-win__label">Reduction in security risks</span></li><li class="case-win"><span class="case-win__head"><span class="case-win__icon"><svg class="icon" aria-hidden="true"><use href="#i-file" /></svg></span><strong>100%</strong></span><span class="case-win__label">Compliance with regulatory standards</span></li><li class="case-win"><span class="case-win__head"><span class="case-win__icon"><svg class="icon" aria-hidden="true"><use href="#i-zap" /></svg></span><strong>50%</strong></span><span class="case-win__label">Faster threat detection</span></li></ul>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== 07. Testimonials ===================== -->
+    <section class="section testimonials" id="testimonials" aria-labelledby="testimonials-title">
+      <div class="container">
+        <div class="split-head split-head--stacked">
+          <p class="eyebrow split-head__eyebrow" data-reveal>
+            <span class="eyebrow__num">07</span>
+            Client Testimonials
+          </p>
+          <h2 class="section-title split-head__title" id="testimonials-title" data-reveal style="--d:1">Trusted Partnerships. <span class="text-accent">Lasting Impact.</span></h2>
+          <p class="section-lead split-head__lead" data-reveal style="--d:2">Hear from our clients about how TECEZE has helped them overcome complex technology challenges and achieve their business goals.</p>
+          <div class="split-head__actions" data-reveal style="--d:3">
+            <a class="btn btn--outline btn--lg" href="#contact">View All Testimonials <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+          </div>
+        </div>
+        <!-- Carousel: swipe or use the arrows above -->
+        <ul class="tcards" id="quote-track" aria-label="Client testimonials" data-reveal style="--d:1">
+            <li class="tcard">
+              <figure>
+                <span class="tcard__mark" aria-hidden="true"><svg class="icon"><use href="#i-quote" /></svg></span>
+                <span class="tcard__stars" aria-label="5 out of 5">★★★★★</span>
+                <blockquote class="tcard__quote">“TECEZE has been a strategic technology partner for us. Their proactive approach, technical expertise and commitment to service excellence have significantly improved our IT operations.”</blockquote>
+                <figcaption class="tcard__person"><img class="tcard__avatar" src="assets/images/testimonials/ravi.jpg" width="76" height="76" alt="" loading="lazy" /><span><strong>Ravi Kumar</strong>CIO, Leading Healthcare Group</span></figcaption>
+              </figure>
+            </li>
+            <li class="tcard">
+              <figure>
+                <span class="tcard__mark" aria-hidden="true"><svg class="icon"><use href="#i-quote" /></svg></span>
+                <span class="tcard__stars" aria-label="5 out of 5">★★★★★</span>
+                <blockquote class="tcard__quote">“The TECEZE team demonstrated deep knowledge, professionalism and a strong commitment to our success. They helped us modernise our infrastructure with minimal disruption to our operations.”</blockquote>
+                <figcaption class="tcard__person"><img class="tcard__avatar" src="assets/images/testimonials/priya.jpg" width="76" height="76" alt="" loading="lazy" /><span><strong>Priya Sharma</strong>Head of IT Operations, Straive</span><img class="tcard__logo" src="assets/logos/straive.webp" width="1063" height="240" alt="Straive" loading="lazy" /></figcaption>
+              </figure>
+            </li>
+            <li class="tcard">
+              <figure>
+                <span class="tcard__mark" aria-hidden="true"><svg class="icon"><use href="#i-quote" /></svg></span>
+                <span class="tcard__stars" aria-label="5 out of 5">★★★★★</span>
+                <blockquote class="tcard__quote">“TECEZE’s cybersecurity solutions have strengthened our security posture and given us greater confidence in managing evolving threats.”</blockquote>
+                <figcaption class="tcard__person"><img class="tcard__avatar" src="assets/images/testimonials/arun.jpg" width="76" height="76" alt="" loading="lazy" /><span><strong>Arun Mehta</strong>Head of Information Security, Wipro</span><img class="tcard__logo" src="assets/logos/wipro.webp" width="322" height="240" alt="Wipro" loading="lazy" /></figcaption>
+              </figure>
+            </li>
+            <li class="tcard">
+              <figure>
+                <span class="tcard__mark" aria-hidden="true"><svg class="icon"><use href="#i-quote" /></svg></span>
+                <span class="tcard__stars" aria-label="5 out of 5">★★★★★</span>
+                <blockquote class="tcard__quote">“Their field engineers covered sites in twelve countries for our store roll-out, on schedule and with clear reporting at every step.”</blockquote>
+                <figcaption class="tcard__person"><span class="tcard__avatar tcard__avatar--initials" aria-hidden="true">MI</span><span><strong>Meera Iyer</strong>Director of Operations, Retail Group</span></figcaption>
+              </figure>
+            </li>
+            <li class="tcard">
+              <figure>
+                <span class="tcard__mark" aria-hidden="true"><svg class="icon"><use href="#i-quote" /></svg></span>
+                <span class="tcard__stars" aria-label="5 out of 5">★★★★★</span>
+                <blockquote class="tcard__quote">“Moving to TECEZE’s managed IT model gave us one service desk for every plant and far fewer production stoppages.”</blockquote>
+                <figcaption class="tcard__person"><span class="tcard__avatar tcard__avatar--initials" aria-hidden="true">DB</span><span><strong>Daniel Brooks</strong>VP Technology, Manufacturing Enterprise</span></figcaption>
+              </figure>
+            </li>
+        </ul>
+        <div class="tdots" data-quote-dots role="group" aria-label="Choose testimonials"></div>
+      </div>
+    </section>
+
+    <!-- ===================== 08. Insights ===================== -->
+    <section class="section insights" id="insights" aria-labelledby="insights-title">
+      <div class="container">
+        <div class="split-head split-head--stacked">
+          <p class="eyebrow split-head__eyebrow" data-reveal>
+            <span class="eyebrow__num">08</span>
+            <span class="eyebrow__line" aria-hidden="true"></span>
+            Insights &amp; Resources
+          </p>
+          <h2 class="section-title split-head__title" id="insights-title" data-reveal style="--d:1">Insights Shaping the <span class="text-accent">Future of Technology</span></h2>
+          <p class="section-lead split-head__lead" data-reveal style="--d:2">Explore expert perspectives, industry trends and practical insights to help your business make informed technology decisions.</p>
+          <div class="split-head__actions" data-reveal style="--d:3">
+            <a class="btn btn--outline btn--lg" href="#contact">View All Insights <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+          </div>
+        </div>
+        <div class="chips" role="group" aria-label="Filter insights by topic" data-reveal style="--d:2"><button class="chip" type="button" aria-pressed="true" data-filter="all">All</button><button class="chip" type="button" aria-pressed="false" data-filter="Cloud">Cloud</button><button class="chip" type="button" aria-pressed="false" data-filter="Cybersecurity">Cybersecurity</button><button class="chip" type="button" aria-pressed="false" data-filter="Managed IT">Managed IT</button><button class="chip" type="button" aria-pressed="false" data-filter="Digital Transformation">Digital Transformation</button><button class="chip" type="button" aria-pressed="false" data-filter="AI & Automation">AI &amp; Automation</button><button class="chip" type="button" aria-pressed="false" data-filter="Industry Trends">Industry Trends</button></div>
+
+        <div class="insights__grid" data-reveal style="--d:3">
+          <div class="insights__posts" data-posts>
+            <article class="post icard" data-category="Cloud">
+              <div class="icard__media"><img src="assets/images/insights/featured.jpg" alt="City skyline at dusk with glass office towers" loading="lazy" /></div>
+              <div class="icard__body">
+                <span class="icard__cat icard__cat--blue">Cloud</span>
+                <h3 class="icard__title"><a href="#contact">Building Scalable Infrastructure for Modern Enterprises</a></h3>
+                <p class="icard__excerpt">How modern cloud infrastructure improves resilience, reduces costs and helps enterprises scale faster.</p>
+                <div class="icard__foot">
+                  <span class="icard__author"><img class="icard__avatar" src="assets/images/insights/arjun.jpg" width="44" height="44" alt="" loading="lazy" /><span><strong>Arjun Mehta</strong>Tech Lead</span></span>
+                  <span class="icard__meta"><span><svg class="icon" aria-hidden="true"><use href="#i-calendar" /></svg>Aug 20, 2026</span><span><svg class="icon" aria-hidden="true"><use href="#i-clock" /></svg>6 min read</span></span>
+                </div>
+              </div>
+            </article>
+            <article class="post icard" data-category="Cybersecurity">
+              <div class="icard__media"><img src="assets/images/services/cybersecurity.webp" alt="Glowing green security shield with a padlock in a modern office" loading="lazy" /></div>
+              <div class="icard__body">
+                <span class="icard__cat icard__cat--green">Cybersecurity</span>
+                <h3 class="icard__title"><a href="#contact">Strengthening Enterprise Security in an Evolving Threat Landscape</a></h3>
+                <p class="icard__excerpt">Key strategies to protect your business from emerging cyber threats and stay compliant.</p>
+                <div class="icard__foot">
+                  <span class="icard__author"><span class="icard__avatar icard__avatar--initials" aria-hidden="true">KN</span><span><strong>Kavya Nair</strong>Security Architect</span></span>
+                  <span class="icard__meta"><span><svg class="icon" aria-hidden="true"><use href="#i-calendar" /></svg>Aug 12, 2026</span><span><svg class="icon" aria-hidden="true"><use href="#i-clock" /></svg>5 min read</span></span>
+                </div>
+              </div>
+            </article>
+            <article class="post icard" data-category="AI &amp; Automation">
+              <div class="icard__media"><img src="assets/images/industries/scenes/manufacturing.jpg" alt="Robotic arms on a production line with monitoring dashboards" loading="lazy" /></div>
+              <div class="icard__body">
+                <span class="icard__cat icard__cat--purple">AI &amp; Automation</span>
+                <h3 class="icard__title"><a href="#contact">From Tasks to Outcomes: The Real Value of Automation</a></h3>
+                <p class="icard__excerpt">Practical ways businesses are using AI and intelligent automation to unlock productivity.</p>
+                <div class="icard__foot">
+                  <span class="icard__author"><span class="icard__avatar icard__avatar--initials" aria-hidden="true">AI</span><span><strong>Ananya Iyer</strong>Product Manager</span></span>
+                  <span class="icard__meta"><span><svg class="icon" aria-hidden="true"><use href="#i-calendar" /></svg>Oct 5, 2026</span><span><svg class="icon" aria-hidden="true"><use href="#i-clock" /></svg>5 min read</span></span>
+                </div>
+              </div>
+            </article>
+            <article class="post icard" data-category="Managed IT">
+              <div class="icard__media"><img src="assets/images/industries/scenes/education.jpg" alt="Laptop with learning tools in front of a red-brick university building" loading="lazy" /></div>
+              <div class="icard__body">
+                <span class="icard__cat icard__cat--amber">Managed IT</span>
+                <h3 class="icard__title"><a href="#contact">Managed IT for Modern Campuses: Keeping Learning Online</a></h3>
+                <p class="icard__excerpt">How proactive monitoring and a single service desk keep classrooms, labs and student systems running.</p>
+                <div class="icard__foot">
+                  <span class="icard__author"><span class="icard__avatar icard__avatar--initials" aria-hidden="true">RV</span><span><strong>Rahul Verma</strong>Service Delivery Lead</span></span>
+                  <span class="icard__meta"><span><svg class="icon" aria-hidden="true"><use href="#i-calendar" /></svg>Sep 18, 2026</span><span><svg class="icon" aria-hidden="true"><use href="#i-clock" /></svg>4 min read</span></span>
+                </div>
+              </div>
+            </article>
+            <article class="post icard" data-category="Digital Transformation">
+              <div class="icard__media"><img src="assets/images/industries/scenes/retail.jpg" alt="Shopping bag on a glowing platform with store, payment and analytics panels" loading="lazy" /></div>
+              <div class="icard__body">
+                <span class="icard__cat icard__cat--rose">Digital Transformation</span>
+                <h3 class="icard__title"><a href="#contact">Rethinking Retail: Digital Transformation from Store to Cloud</a></h3>
+                <p class="icard__excerpt">Connecting POS, inventory and customer data to create seamless experiences across every channel.</p>
+                <div class="icard__foot">
+                  <span class="icard__author"><span class="icard__avatar icard__avatar--initials" aria-hidden="true">ST</span><span><strong>Sara Thomas</strong>Transformation Consultant</span></span>
+                  <span class="icard__meta"><span><svg class="icon" aria-hidden="true"><use href="#i-calendar" /></svg>Sep 2, 2026</span><span><svg class="icon" aria-hidden="true"><use href="#i-clock" /></svg>6 min read</span></span>
+                </div>
+              </div>
+            </article>
+            <article class="post icard" data-category="Industry Trends">
+              <div class="icard__media"><img src="assets/images/industries/logistics.jpg" alt="Trucks, shipping containers and a cargo plane at sunset" loading="lazy" /></div>
+              <div class="icard__body">
+                <span class="icard__cat icard__cat--orange">Industry Trends</span>
+                <h3 class="icard__title"><a href="#contact">Five Supply Chain Technology Trends to Watch in 2027</a></h3>
+                <p class="icard__excerpt">From real-time tracking to predictive logistics, the shifts reshaping how goods move around the world.</p>
+                <div class="icard__foot">
+                  <span class="icard__author"><span class="icard__avatar icard__avatar--initials" aria-hidden="true">VR</span><span><strong>Vikram Rao</strong>Industry Analyst</span></span>
+                  <span class="icard__meta"><span><svg class="icon" aria-hidden="true"><use href="#i-calendar" /></svg>Jul 28, 2026</span><span><svg class="icon" aria-hidden="true"><use href="#i-clock" /></svg>7 min read</span></span>
+                </div>
+              </div>
+            </article>
+            <p class="insights__empty" data-posts-empty hidden>New articles on this topic are coming soon.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 09. Contact ===================== -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="container contact__grid">
+        <div class="contact__intro">
+          <p class="eyebrow" data-reveal>
+            <span class="eyebrow__num">09</span>
+            Contact / Consultation
+          </p>
+          <h2 class="section-title" id="contact-title" data-reveal style="--d:1">Let’s Solve Your Next <span class="text-accent">Technology Challenge.</span></h2>
+          <p class="section-lead" data-reveal style="--d:2">Connect with our experts to explore technology solutions tailored to your business needs. Whether you’re planning an IT transformation or need support for your existing infrastructure, we’re here to help.</p>
+        </div>
+
+        <div class="contact-card" data-reveal style="--d:2">
+          <form class="contact-form" data-contact-form novalidate>
+            <p class="contact-card__eyebrow">Get in touch</p>
+            <h3 class="contact-card__title">Request a Consultation</h3>
+            <p class="contact-card__sub">Fill in the details below and our team will get in touch with you.</p>
+            <div class="form-grid">
+              <div class="field">
+                <label for="cf-name">Full Name <span class="field__req" aria-hidden="true">*</span></label>
+                <div class="field__control"><svg class="icon" aria-hidden="true"><use href="#i-user" /></svg><input id="cf-name" name="name" type="text" autocomplete="name" placeholder="Enter your full name" required aria-describedby="cf-name-err" /></div>
+                <p class="field__error" id="cf-name-err"></p>
+              </div>
+              <div class="field">
+                <label for="cf-email">Business Email <span class="field__req" aria-hidden="true">*</span></label>
+                <div class="field__control"><svg class="icon" aria-hidden="true"><use href="#i-mail" /></svg><input id="cf-email" name="email" type="email" autocomplete="email" placeholder="Enter your business email" required aria-describedby="cf-email-err" /></div>
+                <p class="field__error" id="cf-email-err"></p>
+              </div>
+              <div class="field">
+                <label for="cf-company">Company Name <span class="field__req" aria-hidden="true">*</span></label>
+                <div class="field__control"><svg class="icon" aria-hidden="true"><use href="#i-building" /></svg><input id="cf-company" name="company" type="text" autocomplete="organization" placeholder="Enter your company name" required aria-describedby="cf-company-err" /></div>
+                <p class="field__error" id="cf-company-err"></p>
+              </div>
+              <div class="field">
+                <label for="cf-service">Service Interested In <span class="field__req" aria-hidden="true">*</span></label>
+                <div class="field__control field__control--select"><svg class="icon" aria-hidden="true"><use href="#i-grid" /></svg>
+                  <select id="cf-service" name="service" required aria-describedby="cf-service-err"><option value="">Select a service</option><option>Cybersecurity</option><option>Cloud Solutions</option><option>Global Procurement</option><option>Managed IT Services</option><option>IT Infrastructure</option><option>Global Field Services</option><option>AI &amp; Automation</option><option>Consulting Services</option><option>Application Development</option><option>Something else</option></select>
+                  <svg class="icon field__chevron" aria-hidden="true"><use href="#i-chevron" /></svg>
+                </div>
+                <p class="field__error" id="cf-service-err"></p>
+              </div>
+              <div class="field field--full">
+                <label for="cf-message">Message (Optional)</label>
+                <div class="field__control field__control--area"><svg class="icon" aria-hidden="true"><use href="#i-chat-dots" /></svg><textarea id="cf-message" name="message" rows="4" maxlength="500" placeholder="Tell us about your requirements..." aria-describedby="cf-count"></textarea>
+                  <span class="field__count" id="cf-count"><span data-count-chars>0</span>/500</span></div>
+              </div>
+            </div>
+            <button class="btn btn--primary btn--lg contact-form__submit" type="submit">Request Consultation <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg></button>
+            <p class="contact-form__note"><svg class="icon" aria-hidden="true"><use href="#i-lock" /></svg>Your information is secure and will only be used to respond to your enquiry. We respect your privacy.</p>
+          </form>
+          <div class="contact-success" data-contact-success hidden tabindex="-1">
+            <span class="contact-success__icon"><svg class="icon" aria-hidden="true"><use href="#i-check-filled" /></svg></span>
+            <h3 class="contact-card__title">Thank you!</h3>
+            <p class="contact-card__sub">Your request has been received. One of our specialists will get back to you within one business day.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== Footer ===================== -->
+  <footer class="site-footer">
+    <div class="site-footer__globe" aria-hidden="true"><canvas data-globe data-globe-center="70,25"></canvas></div>
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a class="footer__logo" href="#hero" aria-label="TECEZE — back to top"><svg class="wordmark" aria-hidden="true"><use href="#wordmark" /></svg></a>
+          <p class="footer__tagline">Technology Solutions<br />for a <span>Smarter Tomorrow.</span></p>
+          <p class="footer__text">We help organisations build secure, scalable and future-ready technology foundations to drive real business impact.</p>
+          <ul class="footer__social">
+            <li><a href="#" aria-label="TECEZE on LinkedIn"><svg class="icon" aria-hidden="true"><use href="#i-linkedin" /></svg></a></li>
+            <li><a href="#" aria-label="TECEZE on YouTube"><svg class="icon" aria-hidden="true"><use href="#i-youtube" /></svg></a></li>
+            <li><a href="#" aria-label="TECEZE on X"><svg class="icon" aria-hidden="true"><use href="#i-x" /></svg></a></li>
+          </ul>
+        </div>
+        <nav class="footer__col" aria-label="Quick Links">
+          <h2 class="footer__heading">Quick Links</h2>
+          <ul><li><a href="#hero">Home</a></li><li><a href="#about">About Us</a></li><li><a href="#services">Services</a></li><li><a href="#industries">Industries</a></li><li><a href="#case-studies">Case Studies</a></li><li><a href="#insights">Insights</a></li><li><a href="#contact">Contact</a></li></ul>
+        </nav>
+        <nav class="footer__col" aria-label="Our Services">
+          <h2 class="footer__heading">Our Services</h2>
+          <ul><li><a href="#services">Cloud Solutions</a></li><li><a href="#services">Cybersecurity</a></li><li><a href="#services">Managed IT</a></li><li><a href="#services">Global Field Services</a></li><li><a href="#services">AI &amp; Automation</a></li><li><a href="#services">IT Infrastructure</a></li><li><a href="#services">Consulting</a></li></ul>
+        </nav>
+        <nav class="footer__col" aria-label="Industries">
+          <h2 class="footer__heading">Industries</h2>
+          <ul><li><a href="#industries">Healthcare</a></li><li><a href="#industries">Banking &amp; Finance</a></li><li><a href="#industries">Retail</a></li><li><a href="#industries">Manufacturing</a></li><li><a href="#industries">Education</a></li><li><a href="#industries">Logistics</a></li><li><a href="#industries">More Industries</a></li></ul>
+        </nav>
+        <div class="footer__news">
+          <h2 class="footer__heading">Stay Updated</h2>
+          <p class="footer__text">Get the latest insights, industry trends and technology updates.</p>
+          <form class="newsletter" data-newsletter novalidate>
+            <label class="sr-only" for="nl-email">Email address</label>
+            <input id="nl-email" type="email" name="email" placeholder="Enter your email address" autocomplete="email" required />
+            <button type="submit" aria-label="Subscribe"><svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg></button>
+          </form>
+          <p class="footer__small" data-newsletter-msg aria-live="polite">We respect your privacy. No spam, ever.</p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 TECEZE. All rights reserved.</p>
+        <ul class="footer__legal"><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Service</a></li><li><a href="#">Cookie Policy</a></li></ul>
+        <ul class="footer__where">
+          <li><svg class="icon" aria-hidden="true"><use href="#i-pin" /></svg>Chennai, India</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-globe" /></svg>Global Presence</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== Video modal ===================== -->
+  <!-- Put an embed URL in data-video-src (e.g. https://www.youtube.com/embed/VIDEO_ID?autoplay=1) -->
+  <dialog class="video-modal" id="video-modal" aria-label="TECEZE video">
+    <button class="video-modal__close" type="button" data-video-close aria-label="Close video">
+      <svg class="icon" aria-hidden="true"><use href="#i-close" /></svg>
+    </button>
+    <div class="video-modal__frame" data-video-src="">
+      <div class="video-modal__placeholder">
+        <span class="play-btn__icon"><svg aria-hidden="true"><use href="#i-play" /></svg></span>
+        <p>Your brand video plays here.</p>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Floating section menu: appears once the header has scrolled out of view -->
+  <div class="fab-nav" data-fab-nav>
+    <nav class="fab-nav__menu" id="fab-menu" aria-label="Jump to section">
+      <p class="fab-nav__title">Jump to section</p>
+      <ul>
+          <li><a class="fab-nav__link" href="#hero"><span class="fab-nav__num">01</span>Hero</a></li>
+          <li><a class="fab-nav__link" href="#about"><span class="fab-nav__num">02</span>About</a></li>
+          <li><a class="fab-nav__link" href="#services"><span class="fab-nav__num">03</span>Services</a></li>
+          <li><a class="fab-nav__link" href="#why-teceze"><span class="fab-nav__num">04</span>Why TECEZE</a></li>
+          <li><a class="fab-nav__link" href="#industries"><span class="fab-nav__num">05</span>Industries</a></li>
+          <li><a class="fab-nav__link" href="#case-studies"><span class="fab-nav__num">06</span>Case Studies</a></li>
+          <li><a class="fab-nav__link" href="#testimonials"><span class="fab-nav__num">07</span>Testimonials</a></li>
+          <li><a class="fab-nav__link" href="#insights"><span class="fab-nav__num">08</span>Insights</a></li>
+          <li><a class="fab-nav__link" href="#contact"><span class="fab-nav__num">09</span>Contact</a></li>
+      </ul>
+    </nav>
+    <button class="fab-nav__btn" type="button" aria-expanded="false" aria-controls="fab-menu" aria-label="Open section menu">
+      <svg class="icon fab-nav__open" aria-hidden="true"><use href="#i-sections" /></svg>
+      <svg class="icon fab-nav__close" aria-hidden="true"><use href="#i-close" /></svg>
+    </button>
+  </div>
+
+  <script src="js/main.js?v=1792040947" defer></script>
+  <script src="js/globe.js?v=1792040947" defer></script>
+</body>
+</html>
